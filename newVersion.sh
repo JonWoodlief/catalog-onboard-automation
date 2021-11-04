@@ -2,6 +2,7 @@
 
 set -e
 
+#log in to cli, install cm plugin, parameterize resource group
 ibmcloud target -g Default
 
 tgzurl="$1"
