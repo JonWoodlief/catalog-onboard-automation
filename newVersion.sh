@@ -1,9 +1,9 @@
 #!/bin/sh
 
-set -e
-
 #log in to cli, install cm plugin, parameterize resource group
-ibmcloud target -g Default
+ibmcloud login --apikey $CATALOG_APIKEY --no-region
+ibmcloud plugin install catalogs-management
+ibmcloud target -g production
 
 tgzurl="$1"
 version="$2"
